@@ -1,0 +1,11 @@
+Randomisation and python List
+We will built Rock Pen papaer series
+
+python uses mersenne Twister
+We can read on the wikipedia
+
+Free video from khan academy on psudo random number generator
+
+
+
+
