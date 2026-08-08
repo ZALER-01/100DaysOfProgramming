@@ -1,0 +1,9 @@
+The topics till day 6 we have covered is
+
+for & while Loops
+if  / else
+Lists
+strings
+Range
+Modules
+https://en.wikipedia.org/wiki/Hangman_(game)
