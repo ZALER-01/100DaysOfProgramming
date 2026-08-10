@@ -7,3 +7,4 @@ strings
 Range
 Modules
 https://en.wikipedia.org/wiki/Hangman_(game)
+https://appbrewery.github.io/python-day7-demo/

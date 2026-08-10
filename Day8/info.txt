@@ -1,0 +1,46 @@
+https://appbrewery.github.io/python-day8-demo/
+
+
+Something = 123
+    .         .
+    .         .
+    .         .
+Parameter   Argument
+
+Paramater is the name of data
+
+Copilot said:
+Parameter
+
+A parameter is a variable defined in a function that receives a value when the function is called.
+
+Python
+1
+def greet_with_name(name):
+2
+print(f"Hello {name}")
+Show more lines
+
+Here, name is the parameter.
+
+Argument
+
+An argument is the actual value passed to a function when it is called.
+
+Python
+1
+greet_with_name("Rituraj")
+Show more lines
+
+Here, "Rituraj" is the argument.
+
+
+def calculate_love_score(name1, name2):
+names = (name1 + name2).lower()
+
+true_score = sum(names.count(letter) for letter in "true")
+
+love_score = sum(names.count(letter) for letter in "love")
+print(f"{true_score}{love_score}")
+
+calculate_love_score("Kanye West", "Kim Kardashian")
