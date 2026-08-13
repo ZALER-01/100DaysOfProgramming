@@ -1,0 +1,5 @@
+We are going to build an bidding project
+We focus on dictionary
+Nesting
+
+Dictionary has key and Value
