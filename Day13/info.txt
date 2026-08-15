@@ -1,0 +1,6 @@
+In this day 13 we will run about debugging a problem
+
+1.Describe the problem try to untangle that
+
+2.Reproducing a bug
+Grace Hopper
