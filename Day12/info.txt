@@ -1,0 +1,18 @@
+Defining Scope
+
+Local scope exist inside function
+
+Any Varibale that is defined in any function
+or idented inside anyother if else whatever
+it is local variable
+
+when we use local varibale we create entire new varibale
+
+it is really terrible to define same name to local and global varibale
+
+
+Found a website that changes text to ascii
+https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Rituraj%0AThis+is+cool+website&x=none&v=4&h=4&w=80&we=false
+https://github.com/donnemartin/system-design-primer/blob/master/README.md
+https://github.com/ashishps1/awesome-system-design-resources
+
