@@ -1,2 +1,2 @@
 # 100DaysOfProgramming
-For learning purpose 
+For learnng purpose 
