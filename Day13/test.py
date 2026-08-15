@@ -21,3 +21,17 @@ if 1980 < year < 1994:
     print(f'you are a mellenial')
 elif year >1994 :
     print(f'you are a genz')
+
+word_per_page = 0
+
+try:
+    pages = int(input("No of words per page: "))
+
+    total_words = pages * word_per_page
+
+    print(f"pages = {pages}")
+    print(f"word_per_page = {word_per_page}")
+    print(f"total_words = {total_words}")
+
+except ValueError:
+    print("Please enter a valid integer.")
