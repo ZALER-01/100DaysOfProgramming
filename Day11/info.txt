@@ -1,0 +1,9 @@
+Blackjack capstone project
+
+#Create black jack game
+
+it is basically a 21 game
+
+you have to add card to highest but it should not cross 21
+
+
