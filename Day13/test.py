@@ -1,10 +1,13 @@
-from random import randint
+from random import randint, random
+import math
+
 
 def my_function():
     for i in range(1,20):
         if i ==20:
             print("You got it!")
 my_function()
+
 
 def my_function1():
     for i in range(1,21):
@@ -35,3 +38,14 @@ try:
 
 except ValueError:
     print("Please enter a valid integer.")
+
+def mutate (a_list):
+    b_list = []
+    new_item = 0
+    for item in a_list:
+        new_item = item * 2
+        new_item += random.randint(0,1)
+        new_item = maths.add(new_item , item)
+    b_list.append(new_item)
+    print(b_list)
+
