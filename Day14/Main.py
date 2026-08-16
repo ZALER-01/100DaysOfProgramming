@@ -2,19 +2,18 @@ from art import logo
 import random
 from gameData import data
 
-print(logo)
-
 
 def format_data(account):
-    """Take account data and return printable format"""
+    """Format account data into printable string"""
     name = account["name"]
     description = account["description"]
     country = account["country"]
+
     return f"{name}, a {description}, from {country}"
 
 
 def check_answer(user_guess, a_followers, b_followers):
-    """Return True if user is correct, otherwise False"""
+    """Return True if user guessed correctly"""
 
     if a_followers > b_followers:
         return user_guess == "A"
@@ -22,38 +21,52 @@ def check_answer(user_guess, a_followers, b_followers):
         return user_guess == "B"
 
 
-# Pick two random accounts
-account_a = random.choice(data)
-account_b = random.choice(data)
+score = 0
+game_should_continue = True
 
-# Make sure A and B are different
-while account_a == account_b:
+account_a = random.choice(data)
+
+while game_should_continue:
+
     account_b = random.choice(data)
 
-print(f"Compare A: {format_data(account_a)}")
-print("VS")
-print(f"Against B: {format_data(account_b)}")
+    while account_a == account_b:
+        account_b = random.choice(data)
 
-# Ask user for guess
-guess = input("Who has more followers? Type 'A' or 'B': ").upper()
+    print(logo)
 
-# Get follower counts
-a_followers_count = account_a["followers_count"]
-b_followers_count = account_b["followers_count"]
+    print(f"Compare A: {format_data(account_a)}")
+    print("vs")
+    print(f"Against B: {format_data(account_b)}")
 
-# Check answer
-is_correct = check_answer(
-    guess,
-    a_followers_count,
-    b_followers_count
-)
+    guess = input("Who has more followers? Type 'A' or 'B': ").upper()
 
-# Display result
-if is_correct:
-    print("✅ You are right!")
-else:
-    print("❌ Sorry, that's wrong.")
+    a_followers_count = account_a["followers_count"]
+    b_followers_count = account_b["followers_count"]
 
-print(f"\n{name:=^30}")
-print(f"A followers: {a_followers_count}")
-print(f"B followers: {b_followers_count}")
+    is_correct = check_answer(
+        guess,
+        a_followers_count,
+        b_followers_count
+    )
+
+    if is_correct:
+        score += 1
+        print(f"You're right! Current score: {score}")
+
+        # B becomes A for next round
+        account_a = account_b
+
+    else:
+        game_should_continue = False
+        print(
+            f"Sorry, that's wrong. Final score: {score}"
+        )
+
+        print(
+            f"A had {a_followers_count} million followers."
+        )
+
+        print(
+            f"B had {b_followers_count} million followers."
+        )
