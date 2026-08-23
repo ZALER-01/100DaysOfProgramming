@@ -20,6 +20,7 @@ for _ in range(4):
     tim.shape("turtle")
     tim.forward(100)
     tim.right(90)
+#its better to use loop for repeating
     
 #if we have imported simply turtle then we can use turtle.forward() instead of tim.forward() and turtle.right() instead of tim.right()
 #modulename.nameOfclass()
