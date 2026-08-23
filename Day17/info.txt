@@ -1,0 +1,6 @@
+Today we are going to build True False game completly using OOPS
+
+#class name starts with Caps
+# This is Known as pascal case
+#Camel case is different from pascal case
+#
