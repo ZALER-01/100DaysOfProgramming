@@ -1,0 +1,13 @@
+# We are going to build a snake game
+
+for Building we are going to break down in 7 simple steps
+
+Create a snake body
+move body
+control the snake
+Create Scoreboard
+
+Detect collosion with wall
+Detect colllosion with tail
+
+
