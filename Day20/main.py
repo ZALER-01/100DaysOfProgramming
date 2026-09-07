@@ -1,41 +1,39 @@
+import time
 from turtle import Turtle, Screen
 
+# Set up the screen
 screen = Screen()
 screen.setup(width=600, height=600)
-
 screen.bgcolor("black")
-screen.title("My Snake Game Creating on 30-08-2026")
+screen.title("My Snake Game")
+screen.tracer(0)
 
-starting_position = [(0, 0), (-20, 0), (-40, 0)]
-segment1 = Turtle("square")
-
+# Starting positions for the 3 snake segments
+starting_positions = [(0, 0), (-20, 0), (-40, 0)]
 segments = []
 
-for position in starting_position:
-    newSegment = Turtle(shape="square")
-    newSegment.color("white")
-    newSegment.penup()
-    newSegment.goto(position)
-    segments.append(newSegment)
+# Create and position each segment FIRST
+for position in starting_positions:
+    new_segment = Turtle("square")
+    new_segment.color("white")
+    new_segment.penup()
+    new_segment.goto(position)
+    segments.append(new_segment)
 
-#if we want something happens continiously go with while loop4
-gameIson = True
-while gameIson:
-    for segment in segments:
-        segment.forward(20)
+# Start the game loop
+game_is_on = True
+while game_is_on:
+    screen.update()
+    time.sleep(0.1)
 
-# segment1 = Turtle(shape="square")
-# segment1.color("white")
-# segment1.penup()
+    # Move the body segments from back to front
+    # Segment 3 moves to Segment 2's position, Segment 2 moves to Segment 1's position
+    for seg_num in range(len(segments) - 1, 0, -1):
+        new_x = segments[seg_num - 1].xcor()
+        new_y = segments[seg_num - 1].ycor()
+        segments[seg_num].goto(new_x, new_y)
 
-# segment2 = Turtle(shape="square")
-# segment2.color("white")
-# segment2.penup()
-# segment2.goto(-20, 0)
-#
-# segment3 = Turtle(shape="square")
-# segment3.color("white")
-# segment3.penup()
-# segment3.goto(-40, 0)
+    # Move the head (Segment 0) forward
+    segments[0].forward(20)
 
 screen.exitonclick()
